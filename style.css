@@ -23,13 +23,27 @@
 }
 
 @font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/nunito/v24/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTQ3iazbXWjgeg.woff) format('woff');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v24/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTQ3iazbXWjgeg.woff)
+    format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@keyframes show {
+  from {
+    transform: translate(0, 20px);
+    opacity: 0.2;
   }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 
 html,
 body {
@@ -50,7 +64,7 @@ a:-webkit-any-link {
 }
 
 .active {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 nav {
@@ -63,6 +77,7 @@ nav {
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 10;
+  animation: show 1s;
 }
 
 nav div {
@@ -114,6 +129,7 @@ header > div > a {
   border-radius: 5px;
   transition: 0.3s;
   padding: 0.6em 1em;
+  animation: show 1s;
 }
 
 header > div > a:hover {
@@ -124,11 +140,13 @@ header h1 {
   font-family: "Koulen";
   font-size: 5em;
   margin: 0;
+  animation: show 1s;
 }
 
 header h4 {
   font-size: 1.2em;
   margin: 0;
+  animation: show 1s;
 }
 
 header > a {
@@ -138,7 +156,7 @@ header > a {
 }
 
 header > a:hover {
-    bottom: 5em;
+  bottom: 5em;
 }
 
 .places {
@@ -250,7 +268,7 @@ header > a:hover {
 .gallery {
   height: 100%;
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   background-color: rgb(31, 32, 80);
 }
 
@@ -296,6 +314,16 @@ header > a:hover {
   position: absolute;
   top: 0;
 }
+
+.w-button > div {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.w-button > div:hover {
+  opacity: 1;
+}
+
 .w-button > div > a {
   background-color: rgb(74, 77, 182);
   color: white;
@@ -402,11 +430,13 @@ header > a:hover {
 
 .more-places > div:nth-child(1) > h3 {
   margin: 0;
+  animation: show 1s;
 }
 .more-places > div:nth-child(1) > h2 {
   font-family: "Koulen";
   font-size: 3em;
   margin: 0;
+  animation: show 1s;
 }
 
 .more-places > div:nth-child(2) {
@@ -420,6 +450,7 @@ header > a:hover {
   width: 10em;
   height: 30em;
   border-radius: 5px;
+  animation: show 1s;
 }
 
 .not-found {
@@ -438,11 +469,13 @@ header > a:hover {
   font-family: "Koulen";
   font-size: 6em;
   margin: 0;
+  animation: show 1s;
 }
 
 .not-found h2 {
   margin: 0;
   margin-bottom: 1em;
+  animation: show 1s;
 }
 
 .not-found a {
@@ -451,6 +484,7 @@ header > a:hover {
   border-radius: 5px;
   transition: 0.3s;
   padding: 0.6em 1em;
+  animation: show 1s;
 }
 
 .not-found a:hover {
@@ -458,7 +492,7 @@ header > a:hover {
 }
 
 .map {
-    display: flex;
-    justify-content: center;
-    padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
 }
