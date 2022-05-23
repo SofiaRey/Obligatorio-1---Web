@@ -1,0 +1,464 @@
+@font-face {
+  font-family: "Koulen";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/koulen/v25/AMOQz46as3KIBPemhXo8sOUcUw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunito/v24/XRXI3I6Li01BKofiOc5wtlZ2di8HDDshdTQ3iazbXWjgeg.woff)
+    format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v24/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTQ3iazbXWjgeg.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Nunito";
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: white;
+}
+
+.active {
+    font-weight: 600;
+}
+
+nav {
+  width: -webkit-fill-available;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+nav div {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: rgb(150, 153, 227);
+}
+
+nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+  height: 100%;
+  background-image: url("images/Landscape1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+header > div {
+  margin-top: 20em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header > div > a {
+  background-color: rgb(74, 77, 182);
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 0.6em 1em;
+}
+
+header > div > a:hover {
+  background-color: rgb(54, 57, 159);
+}
+
+header h1 {
+  font-family: "Koulen";
+  font-size: 5em;
+  margin: 0;
+}
+
+header h4 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+header > a {
+  position: absolute;
+  bottom: 4em;
+  transition: 0.4s;
+}
+
+header > a:hover {
+    bottom: 5em;
+}
+
+.places {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(31, 32, 80);
+}
+
+.slider {
+  position: absolute;
+  top: 50em;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: 90%;
+  background-color: rgb(22, 23, 69);
+  color: white;
+  border-radius: 5px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.slider > div {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15em;
+  height: 22em;
+  margin-right: 3em;
+  cursor: pointer;
+  padding: 2em;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background-color: rgb(14, 15, 52);
+}
+
+.card h5 {
+  font-size: 1.2em;
+  font-family: "Koulen";
+  margin: 0;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 10em;
+  border-radius: 50%;
+}
+
+.walking {
+  display: flex;
+  width: 90%;
+  margin-top: 30em;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.walking img {
+  width: 30em;
+  border-radius: 5px;
+}
+
+.walking div {
+  width: 30em;
+  margin-left: 2em;
+}
+
+.walking h2 {
+  font-family: "Koulen";
+  font-size: 2em;
+  margin: 0;
+}
+
+.walking h4 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.walking a {
+  background-color: rgb(74, 77, 182);
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.walking a:hover {
+  background-color: rgb(54, 57, 159);
+}
+
+.gallery {
+  height: 100%;
+  display: flex;
+  align-items:flex-end;
+  background-color: rgb(31, 32, 80);
+}
+
+.gallery > div {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 22.6em 22.6em;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.w-text {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-text h2 {
+  font-family: "Koulen";
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}
+
+.w-text p {
+  text-align: center;
+}
+
+.w-button {
+  position: relative;
+  color: white;
+}
+
+.w-button > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.w-button > div > a {
+  background-color: rgb(74, 77, 182);
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.w-button > div > a:hover {
+  background-color: rgb(54, 57, 159);
+}
+
+.gallery > div > div:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.gallery > div > div:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+.gallery > div > div:nth-child(3) {
+  grid-column: 4;
+  grid-row: 1;
+}
+.gallery > div > div:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.gallery > div > div:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.gallery > div > div:nth-child(6) {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.form {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(97, 100, 199);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.form > div > form > div > input {
+  width: 30em;
+  height: 2.5em;
+  border: 1px solid rgb(31, 32, 80);
+  font-family: "Nunito";
+  padding-left: 1em;
+  border-radius: 5px;
+  margin-right: 0.6em;
+}
+
+.form > div > form > div > button {
+  width: 5em;
+  height: 3em;
+  border: none;
+  font-family: "Nunito";
+  border-radius: 5px;
+  background-color: rgb(74, 77, 182);
+  color: white;
+  transition: 0.3s;
+}
+
+.form > div > form > div > button:hover {
+  background-color: rgb(54, 57, 159);
+}
+
+.form > div > form > div {
+  margin-bottom: 0.6em;
+}
+
+.form h2 {
+  font-family: "Koulen";
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.copyright {
+  color: rgb(31, 32, 80);
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+.more-places {
+  background-color: rgb(31, 32, 80);
+  padding: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-places > div:nth-child(1) {
+  text-align: center;
+  color: white;
+}
+
+.more-places > div:nth-child(1) > h3 {
+  margin: 0;
+}
+.more-places > div:nth-child(1) > h2 {
+  font-family: "Koulen";
+  font-size: 3em;
+  margin: 0;
+}
+
+.more-places > div:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: center;
+}
+
+.card-more {
+  width: 10em;
+  height: 30em;
+  border-radius: 5px;
+}
+
+.not-found {
+  height: 100%;
+  background-image: url("images/Landscape1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found h1 {
+  font-family: "Koulen";
+  font-size: 6em;
+  margin: 0;
+}
+
+.not-found h2 {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.not-found a {
+  background-color: rgb(74, 77, 182);
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 0.6em 1em;
+}
+
+.not-found a:hover {
+  background-color: rgb(54, 57, 159);
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+}
